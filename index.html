@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Web App Demo</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+
+    <link href="css/all.css" rel="stylesheet">
+    <style>
+      :root {
+        --webapp: #f44336; /* css-red */
+        --htmlcss: #2196F3; /* css-blue */
+        --javascript: #9c27b0; /* css-purple */
+        --phpsql: #009688; /* css-teal */
+        --pwa: #ff9800; /* css-orange */
+        --android: #4CAF50; /* css-green */
+        --d3: #3f51b5; /* css-indigo */
+        --more: #607d8b; /* css-blue-grey */
+      }
+
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Lato", sans-serif
+        }
+
+        .css-bar,
+        h1,
+        button {
+            font-family: "Montserrat", sans-serif
+        }
+
+        .fa-globe,
+        .fa-cloud,
+        .fa-mobile,
+        .fa-desktop {
+            font-size: 96px
+        }
+
+        .active {
+            display: initial;
+        }
+
+        .inactive {
+            display: none;
+        }
+
+        article {
+            display: none;
+        }
+
+        .css-yellow,
+        .css-hover-yellow:hover {
+            color: #fff !important;
+            background-color: #ffd700 !important
+        }
+
+        .css-orange,
+        .css-hover-orange:hover {
+            color: #fff !important;
+            background-color: #ff9800 !important
+        }
+
+        .nowrap {
+            white-space: nowrap;
+        }
+
+        .WebApp { background-color: var(--webapp); color: white; }
+        .WebApp-icon { color: var(--webapp); }
+
+        .HTMLCSS { background-color: var(--htmlcss); color: white; }
+        .HTMLCSS-icon { color: var(--htmlcss); }
+
+        .JavaScript { background-color: var(--javascript); color: white; }
+        .JavaScript-icon { color: var(--javascript); }
+
+        .PHPSQL { background-color: var(--phpsql); color: white; }
+        .PHPSQL-icon { color: var(--phpsql); }
+
+        .PWA { background-color: var(--pwa); color: white; }
+        .PWA-icon { color: var(--pwa); }
+
+        .Android { background-color: var(--android); color: white; }
+        .Android-icon { color: var(--android); }
+
+        .D3 { background-color: var(--d3); color: white; }
+        .D3-icon { color: var(--d3); }
+
+        .More { background-color: var(--more); color: white; }
+        .More-icon { color: var(--more); }
+    </style>
+</head>
+
+<body contenteditable="false">
+    <!-- Navbar -->
+    <div class="css-top">
+        <div id="navMain" class="css-bar WebApp css-card css-left-align css-large">
+            <a id="navMenuLink"
+                class="css-bar-item css-button css-hide-medium css-hide-large css-right css-padding-large css-hover-white css-large WebApp"
+                href="javascript:void(0);" onclick="myFunction(event)" title="Toggle Navigation Menu">Menu
+                <!--<i class="fa fa-bars"></i>-->
+            </a>
+            <nav class="navMain">
+                <a href="#" class="css-bar-item css-button css-padding-large css-white">Web App</a>
+                <a href="#HTML CSS" class="css-bar-item css-button css-hide-small css-padding-large css-hover-white">HTML
+                    CSS</a>
+                <a href="#JavaScript"
+                    class="css-bar-item css-button css-hide-small css-padding-large css-hover-white">JavaScript</a>
+                <a href="#PHPSQL" class="css-bar-item css-button css-hide-small css-padding-large css-hover-white">PHP SQL</a>
+                <a href="#PWA" class="css-bar-item css-button css-hide-small css-padding-large css-hover-white">PWA</a>
+                <a href="#Android" class="css-bar-item css-button css-hide-small css-padding-large css-hover-white">Android</a>
+                <a href="#3D" class="css-bar-item css-button css-hide-small css-padding-large css-hover-white">3D</a>
+                <a href="#More..." class="css-bar-item css-button css-hide-small css-padding-large css-hover-white">More...</a>
+            </nav>
+        </div>
+
+        <!-- Navbar on small screens -->
+        <div id="navSmall" class="css-bar-block css-white css-hide css-hide-large css-hide-medium css-large">
+            <a href="#" class="css-bar-item css-button css-padding-large">HTML CSS</a>
+            <a href="#" class="css-bar-item css-button css-padding-large">JavaScript</a>
+            <a href="#" class="css-bar-item css-button css-padding-large">PHP SQL</a>
+            <a href="#" class="css-bar-item css-button css-padding-large">PWA</a>
+            <a href="#" class="css-bar-item css-button css-padding-large">Android</a>
+            <a href="#" class="css-bar-item css-button css-padding-large">3D</a>
+            <a href="#More..." class="css-bar-item css-button css-padding-large">More...</a>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <article id="Web App" class="active" data-colour="WebApp">
+        <header class="css-container WebApp css-center" style="padding:128px 8px">
+            <h1 class="css-margin css-jumbo">Web App</h1>
+            <p class="css-xlarge">Responsive, Mobile First, AMP</p>
+            <button class="contact css-button css-black css-padding-large css-large css-margin-top">Contact</button>
+
+            <!-- <button
+                class="contact css-button css-black css-padding-large css-large css-margin-top css-round-medium">Contact</button>
+            <button onclick="document.getElementById('contact-form').style.display='block'" class=" css-button css-black css-padding-large css-large css-margin-top css-round-medium">Contact</button> -->
+        </header>
+
+        <!-- First Grid -->
+        <div class="css-row-padding css-padding-64 css-container">
+            <div class="css-content">
+                <div class="css-twothird">
+                    <h1>Web App</h1>
+                    <h5 class="css-padding-32">Web App...</h5>
+
+                    <p class="css-text-grey">Web App...</p>
+                </div>
+
+                <div class="css-third css-center">
+                    <i class="fa fa-globe css-padding-16 WebApp-icon"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Second Grid -->
+        <div class="css-row-padding css-light-grey css-padding-64 css-container">
+            <div class="css-content">
+                <div class="css-third css-center">
+                    <i class="fa fa-desktop css-padding-64 WebApp-icon css-margin-right"></i>
+                </div>
+
+                <div class="css-twothird">
+                    <h1>Technologies</h1>
+                    <h5 class="css-padding-32">Technologies...</h5>
+
+                    <p class="css-text-grey">Technologies...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Third Grid -->
+        <div class="css-row-padding css-padding-64 css-container">
+            <div class="css-content">
+
+
+                <div class="css-twothird">
+                    <h1>Resources</h1>
+                    <h5 class="css-padding-32">Resources...</h5>
+
+                    <p class="css-text-grey">Resources...</p>
+                </div>
+
+                <div class="css-third css-center">
+                    <i class="fa fa-mobile css-padding-32 WebApp-icon css-margin-right"></i>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Fourth Grid -->
+        <div class="css-row-padding css-light-grey css-padding-64 css-container">
+            <div class="css-content">
+                <div class="css-third css-center">
+                    <i class="fa fa-cloud css-padding-64 WebApp-icon css-margin-right"></i>
+                </div>
+
+                <div class="css-twothird">
+                    <h1>More...</h1>
+                    <h5 class="css-padding-32">More...</h5>
+
+                    <p class="css-text-grey">More...</p>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!--   HTML CSS   HTML CSS   HTML CSS   HTML CSS   HTML CSS   HTML CSS   -->
+    <article id="HTML CSS" data-colour="HTMLCSS">
+        <header class="css-container HTMLCSS css-center" style="padding:128px 16px">
+            <h1 class="css-margin css-jumbo">HTML &nbsp;CSS</h1>
+            <p class="css-xlarge">HTML5, CSS3, Semantic, SASS</p>
+            <button class="contact css-button css-black css-padding-large css-large css-margin-top">Contact</button>
+        </header>
+
+        <!-- First Grid -->
+        <div class="css-row-padding css-padding-64 css-container">
+            <div class="css-content">
+                <div class="css-twothird">
+                    <h1>HTML and CSS</h1>
+                    <h5 class="css-padding-32">HTML and CSS...</h5>
+
+                    <p class="css-text-grey">HTML and CSS...</p>
+                </div>
+
+                <div class="css-third css-center">
+                    <i class="fa fa-globe css-padding-16 HTMLCSS-icon"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Second Grid -->
+        <div class="css-row-padding css-light-grey css-padding-64 css-container">
+            <div class="css-content">
+                <div class="css-third css-center">
+                    <i class="fa fa-desktop css-padding-64 HTMLCSS-icon css-margin-right"></i>
+                </div>
+
+                <div class="css-twothird">
+                    <h1>Technologies</h1>
+                    <h5 class="css-padding-32">Technologies...</h5>
+
+                    <p class="css-text-grey">Technologies...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Third Grid -->
+        <div class="css-row-padding css-padding-64 css-container">
+            <div class="css-content">
+
+
+                <div class="css-twothird">
+                    <h1>Resources</h1>
+                    <h5 class="css-padding-32">Resources...</h5>
+
+                    <p class="css-text-grey">Resources...</p>
+                </div>
+
+                <div class="css-third css-center">
+                    <i class="fa fa-mobile css-padding-32 HTMLCSS-icon css-margin-right"></i>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Fourth Grid -->
+        <div class="css-row-padding css-light-grey css-padding-64 css-container">
+            <div class="css-content">
+                <div class="css-third css-center">
+                    <i class="fa fa-cloud css-padding-64 HTMLCSS-icon css-margin-right"></i>
+                </div>
+
+                <div class="css-twothird">
+                    <h1>More...</h1>
+                    <h5 class="css-padding-32">More...</h5>
+
+                    <p class="css-text-grey">More...</p>
+                </div>
+            </div>
+        </div>
+    </article>
+
+
+    <!--   JavaScript   JavaScript   JavaScript   JavaScript   JavaScript   -->
+    <article id="JavaScript" data-colour="JavaScript">
+        <header class="css-container JavaScript css-center" style="padding:128px 16px">
+            <h1 class="css-margin css-jumbo">JavaScript</h1>
+            <p class="css-xlarge">Vanilla, React, Vue, Svelte</p>
+            <button class="contact css-button css-black css-padding-large css-large css-margin-top">Contact</button>
+        </header>
+
+        <!-- First Grid -->
+        <div class="css-row-padding css-padding-64 css-container">
+            <div class="css-content">
+                <div class="css-twothird">
+                    <h1>JavaScript</h1>
+                    <h5 class="css-padding-32">JavaScript...</h5>
+
+                    <p class="css-text-grey">JavaScript...</p>
+                </div>
+
+                <div class="css-third css-center">
+                    <i class="fa fa-globe css-padding-16 JavaScript-icon"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Second Grid -->
+        <div class="css-row-padding css-light-grey css-padding-64 css-container">
+            <div class="css-content">
+                <div class="css-third css-center">
+                    <i class="fa fa-desktop css-padding-64 JavaScript-icon css-margin-right"></i>
+                </div>
+
+                <div class="css-twothird">
+                    <h1>Technologies</h1>
+                    <h5 class="css-padding-32">Technologies...</h5>
+
+                    <p class="css-text-grey">Technologies...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Third Grid -->
+        <div class="css-row-padding css-padding-64 css-container">
+            <div class="css-content">
+
+
+                <div class="css-twothird">
+                    <h1>Resources</h1>
+                    <h5 class="css-padding-32">Resources...</h5>
+
+                    <p class="css-text-grey">Resources...</p>
+                </div>
+
+                <div class="css-third css-center">
+                    <i class="fa fa-mobile css-padding-32 JavaScript-icon css-margin-right"></i>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Fourth Grid -->
+        <div class="css-row-padding css-light-grey css-padding-64 css-container">
+            <div class="css-content">
+                <div class="css-third css-center">
+                    <i class="fa fa-cloud css-padding-64 JavaScript-icon css-margin-right"></i>
+                </div>
+
+                <div class="css-twothird">
+                    <h1>More...</h1>
+                    <h5 class="css-padding-32">More...</h5>
+
+                    <p class="css-text-grey">More...</p>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!--   PHP SQL   PHP SQL   PHP SQL   PHP SQL   PHP SQL   PHP SQL   -->
+    <article id="PHP SQL" data-colour="PHPSQL">
+        <header class="css-container PHPSQL css-center" style="padding:128px 16px">
+            <h1 class="css-margin css-jumbo">PHP &nbsp;SQL</h1>
+            <p class="css-xlarge">MySQL, PostgreSQL, SQLite, MongoDB, GraphQL</p>
+            <button class="contact css-button css-black css-padding-large css-large css-margin-top">Contact</button>
+        </header>
+
+        <!-- First Grid -->
+        <div class="css-row-padding css-padding-64 css-container">
+            <div class="css-content">
+                <div class="css-twothird">
+                    <h1>PHP and SQL</h1>
+                    <h5 class="css-padding-32">PHP and SQL...</h5>
+
+                    <p class="css-text-grey">PHP and SQL...</p>
+                </div>
+
+                <div class="css-third css-center">
+                    <i class="fa fa-globe css-padding-16 PHPSQL-icon"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Second Grid -->
+        <div class="css-row-padding css-light-grey css-padding-64 css-container">
+            <div class="css-content">
+                <div class="css-third css-center">
+                    <i class="fa fa-desktop css-padding-64 PHPSQL-icon css-margin-right"></i>
+                </div>
+
+                <div class="css-twothird">
+                    <h1>Technologies</h1>
+                    <h5 class="css-padding-32">Technologies...</h5>
+
+                    <p class="css-text-grey">Technologies...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Third Grid -->
+        <div class="css-row-padding css-padding-64 css-container">
+            <div class="css-content">
+
+
+                <div class="css-twothird">
+                    <h1>Resources</h1>
+                    <h5 class="css-padding-32">Resources...</h5>
+
+                    <p class="css-text-grey">Resources...</p>
+                </div>
+
+                <div class="css-third css-center">
+                    <i class="fa fa-mobile css-padding-32 PHPSQL-icon css-margin-right"></i>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Fourth Grid -->
+        <div class="css-row-padding css-light-grey css-padding-64 css-container">
+            <div class="css-content">
+                <div class="css-third css-center">
+                    <i class="fa fa-cloud css-padding-64 PHPSQL-icon css-margin-right"></i>
+                </div>
+
+                <div class="css-twothird">
+                    <h1>More...</h1>
+                    <h5 class="css-padding-32">More...</h5>
+
+                    <p class="css-text-grey">More...</p>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!--   PWA   PWA   PWA   PWA  -->
+
+    <article id="PWA" data-colour="PWA">
+        <header class="css-container PWA css-center" style="padding:128px 16px">
+            <h1 class="css-margin css-jumbo">PWA</h1>
+            <p class="css-xlarge">Progressive Web App</p>
+            <button class="contact css-button css-black css-padding-large css-large css-margin-top">Contact</button>
+        </header>
+
+        <!-- First Grid -->
+        <div class="css-row-padding css-padding-64 css-container">
+            <div class="css-content">
+                <div class="css-twothird">
+                    <h1>Progressive Web App</h1>
+                    <h5 class="css-padding-32">Progressive Web App...</h5>
+
+                    <p class="css-text-grey">Progressive Web App...</p>
+                </div>
+
+                <div class="css-third css-center">
+                    <i class="fa fa-globe css-padding-16 PWA-icon"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Second Grid -->
+        <div class="css-row-padding css-light-grey css-padding-64 css-container">
+            <div class="css-content">
+                <div class="css-third css-center">
+                    <i class="fa fa-desktop css-padding-64 PWA-icon css-margin-right"></i>
+                </div>
+
+                <div class="css-twothird">
+                    <h1>Technologies</h1>
+                    <h5 class="css-padding-32">Technologies...</h5>
+
+                    <p class="css-text-grey">Technologies...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Third Grid -->
+        <div class="css-row-padding css-padding-64 css-container">
+            <div class="css-content">
+
+
+                <div class="css-twothird">
+                    <h1>Resources</h1>
+                    <h5 class="css-padding-32">Resources...</h5>
+
+                    <p class="css-text-grey">Resources...</p>
+                </div>
+
+                <div class="css-third css-center">
+                    <i class="fa fa-mobile css-padding-32 PWA-icon css-margin-right"></i>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Fourth Grid -->
+        <div class="css-row-padding css-light-grey css-padding-64 css-container">
+            <div class="css-content">
+                <div class="css-third css-center">
+                    <i class="fa fa-cloud css-padding-64 PWA-icon css-margin-right"></i>
+                </div>
+
+                <div class="css-twothird">
+                    <h1>More...</h1>
+                    <h5 class="css-padding-32">More...</h5>
+
+                    <p class="css-text-grey">More...</p>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!--   Android   Android   Android   Android  -->
+
+    <article id="Android" data-colour="Android">
+        <header class="css-container Android css-center" style="padding:128px 16px">
+            <h1 class="css-margin css-jumbo">Android</h1>
+            <p class="css-xlarge">Java, Kotlin, Flutter</p>
+            <button class="contact css-button css-black css-padding-large css-large css-margin-top">Contact</button>
+        </header>
+
+        <!-- First Grid -->
+        <div class="css-row-padding css-padding-64 css-container">
+            <div class="css-content">
+                <div class="css-twothird">
+                    <h1>Android</h1>
+                    <h5 class="css-padding-32">Android...</h5>
+
+                    <p class="css-text-grey">Android...</p>
+                </div>
+
+                <div class="css-third css-center">
+                    <i class="fa fa-globe css-padding-16 Android-icon"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Second Grid -->
+        <div class="css-row-padding css-light-grey css-padding-64 css-container">
+            <div class="css-content">
+                <div class="css-third css-center">
+                    <i class="fa fa-desktop css-padding-64 Android-icon css-margin-right"></i>
+                </div>
+
+                <div class="css-twothird">
+                    <h1>Technologies</h1>
+                    <h5 class="css-padding-32">Technologies...</h5>
+
+                    <p class="css-text-grey">Technologies...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Third Grid -->
+        <div class="css-row-padding css-padding-64 css-container">
+            <div class="css-content">
+
+
+                <div class="css-twothird">
+                    <h1>Resources</h1>
+                    <h5 class="css-padding-32">Resources...</h5>
+
+                    <p class="css-text-grey">Resources...</p>
+                </div>
+
+                <div class="css-third css-center">
+                    <i class="fa fa-mobile css-padding-32 Android-icon css-margin-right"></i>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Fourth Grid -->
+        <div class="css-row-padding css-light-grey css-padding-64 css-container">
+            <div class="css-content">
+                <div class="css-third css-center">
+                    <i class="fa fa-cloud css-padding-64 Android-icon css-margin-right"></i>
+                </div>
+
+                <div class="css-twothird">
+                    <h1>More...</h1>
+                    <h5 class="css-padding-32">More...</h5>
+
+                    <p class="css-text-grey">More...</p>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!--   3D   3D   3D   3D  -->
+
+    <article id="3D" data-colour="D3">
+        <header class="css-container D3 css-center" style="padding:128px 16px">
+            <h1 class="css-margin css-jumbo">3D</h1>
+            <p class="css-xlarge">Visualisations, Games, Simulations, Shaders</p>
+            <button class="contact css-button css-black css-padding-large css-large css-margin-top">Contact</button>
+        </header>
+
+        <!-- First Grid -->
+        <div class="css-row-padding css-padding-64 css-container">
+            <div class="css-content">
+                <div class="css-twothird">
+                    <h1>3D</h1>
+                    <h5 class="css-padding-32">3D...</h5>
+
+                    <p class="css-text-grey">3D...</p>
+                </div>
+
+                <div class="css-third css-center">
+                    <i class="fa fa-globe css-padding-16 D3-icon"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Second Grid -->
+        <div class="css-row-padding css-light-grey css-padding-64 css-container">
+            <div class="css-content">
+                <div class="css-third css-center">
+                    <i class="fa fa-desktop css-padding-64 D3-icon css-margin-right"></i>
+                </div>
+
+                <div class="css-twothird">
+                    <h1>Technologies</h1>
+                    <h5 class="css-padding-32">Technologies...</h5>
+
+                    <p class="css-text-grey">Technologies...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Third Grid -->
+        <div class="css-row-padding css-padding-64 css-container">
+            <div class="css-content">
+
+
+                <div class="css-twothird">
+                    <h1>Resources</h1>
+                    <h5 class="css-padding-32">Resources...</h5>
+
+                    <p class="css-text-grey">Resources...</p>
+                </div>
+
+                <div class="css-third css-center">
+                    <i class="fa fa-mobile css-padding-32 D3-icon css-margin-right"></i>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Fourth Grid -->
+        <div class="css-row-padding css-light-grey css-padding-64 css-container">
+            <div class="css-content">
+                <div class="css-third css-center">
+                    <i class="fa fa-cloud css-padding-64 D3-icon css-margin-right"></i>
+                </div>
+
+                <div class="css-twothird">
+                    <h1>More...</h1>
+                    <h5 class="css-padding-32">More...</h5>
+
+                    <p class="css-text-grey">More...</p>
+                </div>
+            </div>
+        </div>
+    </article>
+
+
+    <!--   MORE   MORE   MORE   MORE  -->
+
+    <article id="More..." data-colour="More">
+        <header class="css-container More css-center" style="padding:128px 16px">
+            <h1 class="css-margin css-jumbo">More</h1>
+            <p class="css-xlarge">More...</p>
+            <button class="contact css-button css-black css-padding-large css-large css-margin-top">Contact</button>
+        </header>
+
+        <!-- First Grid -->
+        <div class="css-row-padding css-padding-64 css-container">
+            <div class="css-content">
+                <div class="css-twothird">
+                    <h1>More</h1>
+                    <h5 class="css-padding-32">More...</h5>
+
+                    <p class="css-text-grey">More...</p>
+                </div>
+
+                <div class="css-third css-center">
+                    <i class="fa fa-globe css-padding-16 More-icon"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Second Grid -->
+        <div class="css-row-padding css-light-grey css-padding-64 css-container">
+            <div class="css-content">
+                <div class="css-third css-center">
+                    <i class="fa fa-desktop css-padding-64 More-icon css-margin-right"></i>
+                </div>
+
+                <div class="css-twothird">
+                    <h1>Technologies</h1>
+                    <h5 class="css-padding-32">Technologies...</h5>
+
+                    <p class="css-text-grey">Technologies...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Third Grid -->
+        <div class="css-row-padding css-padding-64 css-container">
+            <div class="css-content">
+
+
+                <div class="css-twothird">
+                    <h1>Resources</h1>
+                    <h5 class="css-padding-32">Resources...</h5>
+
+                    <p class="css-text-grey">Resources...</p>
+                </div>
+
+                <div class="css-third css-center">
+                    <i class="fa fa-mobile css-padding-32 More-icon css-margin-right"></i>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Fourth Grid -->
+        <div class="css-row-padding css-light-grey css-padding-64 css-container">
+            <div class="css-content">
+                <div class="css-third css-center">
+                    <i class="fa fa-cloud css-padding-64 More-icon css-margin-right"></i>
+                </div>
+
+                <div class="css-twothird">
+                    <h1>More...</h1>
+                    <h5 class="css-padding-32">More...</h5>
+
+                    <p class="css-text-grey">More...</p>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <div class="css-container css-black css-center css-opacity css-padding-32">
+        <h1 class="css-margin css-large">devd.uk</h1>
+    </div>
+
+    <!-- Footer -->
+    <footer class="css-container css-padding-32 css-center css-opacity">
+        <div class="css-large css-padding-16">
+            <!-- <i class="fa fa-globe css-hover-opacity"></i> -->
+
+            <!--
+            <i class="fa fa-facebook-official css-hover-opacity"></i>
+            <i class="fa fa-instagram css-hover-opacity"></i>
+            <i class="fa fa-snapchat css-hover-opacity"></i>
+            <i class="fa fa-pinterest-p css-hover-opacity"></i>
+            <i class="fa fa-twitter css-hover-opacity"></i>
+            <i class="fa fa-linkedin css-hover-opacity"></i>
+             -->
+        </div>
+        <p id="month-year">February - 2022</p>
+    </footer>
+
+    <script>
+        // toggle menu button
+        function myFunction(e) {
+            //console.log(e)
+            var x = document.getElementById("navSmall");
+            x.focus()
+            console.log("myFunction")
+            if (x.className.indexOf("css-show") == -1) {
+                x.className += " css-show";
+            } else {
+                x.className = x.className.replace(" css-show", "");
+            }
+            e.stopPropagation()
+        }
+
+        function menuClose() {
+            console.log("menuClose")
+            var menu = document.getElementById("navSmall");
+            if (menu.className.indexOf("css-show") != -1) {
+                menu.className = menu.className.replace(" css-show", "");
+            }
+        }
+
+        function menuBlur() {
+            console.log("menuBlur")
+        }
+
+        function bodyClick() {
+            console.log("bodyClick")
+            menuClose()
+        }
+
+        function bodyScroll() {
+            console.log("bodyScroll")
+            menuClose()
+        }
+
+        function getMonthYear() {
+        const date = new Date();
+        const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+        return months[date.getMonth()] + " - " + date.getFullYear();
+        }
+
+        function displayMonthYear(id) {
+            document.getElementById(id).innerHTML = getMonthYear()
+        }
+           
+        
+        const doc = document;
+        doc.body.addEventListener("click", bodyClick)
+        doc.body.onscroll = bodyScroll // see https://www.javascripttutorial.net/javascript-dom/javascript-scroll-events/
+        let sectionCurrent = doc.querySelector(".active");
+        const navMain = doc.getElementById("navMain") // id
+        const navMenuLink = doc.getElementById("navMenuLink")
+        console.log(sectionCurrent.id)
+        console.log(sectionCurrent.dataset.colour)
+        console.log(sectionCurrent.className)
+        // navMain
+        const secLinks = doc.querySelectorAll(".navMain a"); // class
+        console.log(secLinks)
+        secLinks.forEach((a) => a.addEventListener("click", gotoSection));
+        // navSmall
+        const secLinksMenu = doc.querySelectorAll("#navSmall a"); // class
+        console.log(secLinks)
+        secLinksMenu.forEach((a) => a.addEventListener("click", gotoSection));
+
+        function gotoSection(e) {
+            console.log("gotoSection")
+            //console.log("innerText = " + e.target.innerText);
+            const section = document.getElementById(e.target.innerText);
+            //console.log(section.dataset.colour)
+            section.classList.toggle("active");
+            sectionCurrent.classList.toggle("active");
+
+            // background colour of nav
+            navMain.classList.remove(sectionCurrent.dataset.colour)
+            navMain.classList.add(section.dataset.colour)
+
+            navMenuLink.classList.remove(sectionCurrent.dataset.colour)
+            navMenuLink.classList.add(section.dataset.colour)
+            menuClose() // close menu after nav to another section
+            sectionCurrent = section;
+        }
+
+        displayMonthYear("month-year");
+
+        const contactButtons = document.querySelectorAll('.contact');
+        for (var i = 0; i < contactButtons.length; i++) {
+            contactButtons[i].addEventListener('click', contact)
+        }
+
+        function contact() {
+            //alert('Contacted!');
+        }
+
+    </script>
+
+
+</body>
+
+</html>
